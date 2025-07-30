@@ -15,4 +15,10 @@
 # ##############################################################################
 # include corresponding subdirectory
 nuttx_add_subdirectory()
+if(CONFIG_MODULE_WDGIF)
+    add_subdirectory(watchdog/wdgif)
+endif()
+if(CONFIG_MODULE_WDGM)
+    add_subdirectory(watchdog/wdgm)
+endif()
 nuttx_generate_kconfig(MENUDESC "fusa")
